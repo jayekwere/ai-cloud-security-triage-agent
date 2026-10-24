@@ -1,0 +1,19 @@
+{
+  "simulated": true,
+  "as_of": "2026-10-23",
+  "notice": "All EPSS scores and KEV flags are illustrative fixtures, not current observations. CVE-2099-9999999 is deliberately fictional and absent.",
+  "data": {
+    "CVE-2021-44228": {
+      "epss": 0.94,
+      "kev": true
+    },
+    "CVE-2023-34362": {
+      "epss": 0.86,
+      "kev": true
+    },
+    "CVE-2024-3094": {
+      "epss": 0.04,
+      "kev": false
+    }
+  }
+}

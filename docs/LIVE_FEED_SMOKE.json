@@ -1,0 +1,51 @@
+{
+  "checked_on": "2026-10-23 America/Vancouver",
+  "mode": "live",
+  "as_of": "2026-10-23",
+  "external_writes": 0,
+  "summary": {
+    "by_priority": {
+      "P1": 4,
+      "P2": 3,
+      "P3": 1
+    },
+    "duplicates_merged": 1,
+    "raw_findings": 9,
+    "unique_findings": 8
+  },
+  "evidence": [
+    {
+      "cve": "CVE-2023-34362",
+      "epss": 0.99934,
+      "epss_date": "2026-10-23",
+      "kev": true,
+      "kev_date": "2026-10-23",
+      "provenance": "FIRST-EPSS+CISA-KEV"
+    },
+    {
+      "cve": "CVE-2021-44228",
+      "epss": 0.99999,
+      "epss_date": "2026-10-23",
+      "kev": true,
+      "kev_date": "2026-10-23",
+      "provenance": "FIRST-EPSS+CISA-KEV"
+    },
+    {
+      "cve": "CVE-2099-9999999",
+      "epss": null,
+      "epss_date": null,
+      "kev": false,
+      "kev_date": "2026-10-23",
+      "provenance": "FIRST-EPSS+CISA-KEV"
+    },
+    {
+      "cve": "CVE-2024-3094",
+      "epss": 0.909,
+      "epss_date": "2026-10-23",
+      "kev": false,
+      "kev_date": "2026-10-23",
+      "provenance": "FIRST-EPSS+CISA-KEV"
+    }
+  ],
+  "note": "Actual public-feed smoke check with synthetic asset context. Historical observations, not a promise of current intelligence; offline fixtures remain separate."
+}

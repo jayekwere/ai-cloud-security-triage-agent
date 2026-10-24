@@ -1,0 +1,290 @@
+[
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding b2b3ef71648489c4. Priority P1; due 2026-10-24T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal 58ebac00d6bf7b323948f2372192819de2273ef14bb23d481ff3bcac331c9ff5. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nConfirm CVE-2023-34362 applicability against installed versions and vendor guidance.\nSelect a vendor-supported fixed version; rebuild, scan and test the workload.\nUse a canary rollout and owner-approved maintenance window.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P1] Review vulnerability"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding bd1a8c801163c55c. Priority P1; due 2026-10-24T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal 63027856fd124ed2a5ec49e054c9493d21e4ebb8dd4ff7e341c0b730d473ac69. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nConfirm CVE-2021-44228 applicability against installed versions and vendor guidance.\nSelect a vendor-supported fixed version; rebuild, scan and test the workload.\nUse a canary rollout and owner-approved maintenance window.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P1] Review vulnerability"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding 2b9893a4e562cfe6. Priority P1; due 2026-10-24T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal 8c70b207cf965d94df51b6b3201289d51fd4a0ae54bfddc4adc3600cd64c8db4. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nMap the placeholder to the existing bucket in the owner's Terraform module.\nInspect access policy, CloudTrail data events and downstream access dependencies.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P1] Review storage_public"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding 54f37d34dcb4ef18. Priority P1; due 2026-10-24T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal a5bc1d8861b86a130685ad91a3996f452831f9b75a1df4d058e9238d474758bc. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nMerge these settings into the existing module; do not create a parallel account.\nVerify private endpoint, DNS and approved residency with the data owner.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P1] Review storage_public"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding f190b91aae1bbc2f. Priority P2; due 2026-10-26T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal 4ca547a94ef207cfd77bf9310cd38a4326675c2d250e87cb662873a1a8a8bc90. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nMap legitimate callers; propose approved source CIDRs and required ports.\nRemove the existing broad rule in the owner module after connectivity review.\nTest segmentation, firewall/WAF policy and flow-log detections in staging.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P2] Review network_open"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding 53555801c7c6f78a. Priority P2; due 2026-10-26T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal d243ce09dc2a072f5c1a4815cd91085e8c38330396fc9039b7f050e84aefc223. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nReview IAM Access Analyzer and CloudTrail usage over an agreed observation window.\nReplace wildcard permissions with reviewed actions, resources and conditions.\nValidate federation/workload identity paths and simulate the proposed policy.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P2] Review iam_wildcard"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding 77a7be9f6411ec3e. Priority P2; due 2026-10-26T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal d73669dccfac13c6b6d67db0fb7d048259d9fb678e73899fd9661e5bd965f0c5. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nConfirm CVE-2099-9999999 applicability against installed versions and vendor guidance.\nSelect a vendor-supported fixed version; rebuild, scan and test the workload.\nUse a canary rollout and owner-approved maintenance window.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P2] Review vulnerability"
+      }
+    },
+    "project": "SEC"
+  },
+  {
+    "action": "jira.create_issue",
+    "host": "example.atlassian.net",
+    "intent_id": "2026-10-23T00:00:00+00:00",
+    "payload": {
+      "fields": {
+        "description": {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "Synthetic portfolio finding 3cd19781c8f388bc. Priority P3; due 2026-11-06T00:00:00+00:00. Policy 1.0; digest cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b. Proposal 7611fdc61a454dea00f4456396ebc3dda2a0912b1c5a5f04ce9065ace073a937. Confirm applicability and owner before action.\nConfirm asset ownership, affected configuration and business dependencies.\nConfirm CVE-2024-3094 applicability against installed versions and vendor guidance.\nSelect a vendor-supported fixed version; rebuild, scan and test the workload.\nUse a canary rollout and owner-approved maintenance window.\nRun format, provider validation and a reviewed plan in the owner environment.\nRequire human change approval; rescan after rollout and attach closure evidence.",
+                  "type": "text"
+                }
+              ],
+              "type": "paragraph"
+            }
+          ],
+          "type": "doc",
+          "version": 1
+        },
+        "issuetype": {
+          "name": "Task"
+        },
+        "labels": [
+          "synthetic-portfolio",
+          "cloudtriage"
+        ],
+        "project": {
+          "key": "SEC"
+        },
+        "summary": "[Synthetic][P3] Review vulnerability"
+      }
+    },
+    "project": "SEC"
+  }
+]

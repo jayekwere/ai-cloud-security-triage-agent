@@ -1,0 +1,831 @@
+{
+  "as_of": "2026-10-23",
+  "external_changes": 0,
+  "input_digest": "99b27ea9f7dcbd1151d36718bbe7589858f987b9c78717732efd84e56a13203b",
+  "intel_mode": "fixture",
+  "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+  "provider": "deterministic",
+  "results": [
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "aws",
+          "finding_id": "b2b3ef71648489c4",
+          "kind": "vulnerability",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "58ebac00d6bf7b323948f2372192819de2273ef14bb23d481ff3bcac331c9ff5",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Confirm CVE-2023-34362 applicability against installed versions and vendor guidance.",
+            "Select a vendor-supported fixed version; rebuild, scan and test the workload.",
+            "Use a canary rollout and owner-approved maintenance window.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": null
+        },
+        "trace": [
+          {
+            "output_digest": "2a4b73c55dea0070668c8320500bbc6b2e0804e1df9a2124a82ee9b86d0c7b57",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "eac0cdb374c12910bac468c356d2123cbfda4496766b8ecfc3101edec0b041f5",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "5255f19c9fabbbae5d624372a9bfe6913750d2d23c09a68b4802c81cf2af02ff",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "2e50a37c0feb261430d95b67a804bdb077b966d12dda7e1dd13a51f5886bbcda",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "e5cf424adafc6c8b0c1134916ee355c7ef29fdfd9e6f302cd3cd4006bb2dde8a",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "2e50a37c0feb261430d95b67a804bdb077b966d12dda7e1dd13a51f5886bbcda"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-24T00:00:00+00:00",
+        "finding_id": "b2b3ef71648489c4",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P1",
+        "reasons": [
+          "+29: CVSS severity \u00d7 3",
+          "+17: EPSS exploitation likelihood \u00d7 20",
+          "+35: CISA KEV membership (observed or simulated per provenance)",
+          "+15: internet exposure",
+          "+8: asset criticality \u00d7 2",
+          "+10: confidential/restricted data classification",
+          "P1 override: exposed KEV asset or exposed sensitive storage"
+        ],
+        "score": 100,
+        "uncertainties": []
+      },
+      "evidence": {
+        "cve": "CVE-2023-34362",
+        "epss": 0.86,
+        "epss_date": "2026-10-23",
+        "kev": true,
+        "kev_date": "2026-10-23",
+        "provenance": "simulated-fixture"
+      },
+      "finding": {
+        "asset": "aws-portal-01",
+        "cloud": "aws",
+        "criticality": 4,
+        "cve": "CVE-2023-34362",
+        "cvss": 9.8,
+        "data_class": "confidential",
+        "id": "b2b3ef71648489c4",
+        "internet_exposed": true,
+        "kind": "vulnerability",
+        "privileged": false,
+        "sources": [
+          "wiz"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "aws",
+          "finding_id": "bd1a8c801163c55c",
+          "kind": "vulnerability",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "63027856fd124ed2a5ec49e054c9493d21e4ebb8dd4ff7e341c0b730d473ac69",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Confirm CVE-2021-44228 applicability against installed versions and vendor guidance.",
+            "Select a vendor-supported fixed version; rebuild, scan and test the workload.",
+            "Use a canary rollout and owner-approved maintenance window.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": null
+        },
+        "trace": [
+          {
+            "output_digest": "2947519c392be62bf7a92f1a9c2ad3051fa2a29b03520f51ad1fea80e8a0a5f7",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "f9eddf343ab391036ddc075e95a1df5ad2ecf4231c541c21fd3469ba55223992",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "4621d3a9ab660ae9d0d3447f2f18e9786c5228788abb54ad518f37402b197fda",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "f87d8cf61aa7b17a81d1c4b810c9c5217c80db9b82e4f9275bae7c0d61f1ae63",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "bf16e205411c7d3f12d12befe02d466497078c69925e54f7b89ccb045450fac5",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "f87d8cf61aa7b17a81d1c4b810c9c5217c80db9b82e4f9275bae7c0d61f1ae63"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-24T00:00:00+00:00",
+        "finding_id": "bd1a8c801163c55c",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P1",
+        "reasons": [
+          "+30: CVSS severity \u00d7 3",
+          "+19: EPSS exploitation likelihood \u00d7 20",
+          "+35: CISA KEV membership (observed or simulated per provenance)",
+          "+15: internet exposure",
+          "+10: asset criticality \u00d7 2",
+          "+10: confidential/restricted data classification",
+          "+10: privileged workload or entitlement",
+          "P1 override: exposed KEV asset or exposed sensitive storage"
+        ],
+        "score": 100,
+        "uncertainties": []
+      },
+      "evidence": {
+        "cve": "CVE-2021-44228",
+        "epss": 0.94,
+        "epss_date": "2026-10-23",
+        "kev": true,
+        "kev_date": "2026-10-23",
+        "provenance": "simulated-fixture"
+      },
+      "finding": {
+        "asset": "aws-api-01",
+        "cloud": "aws",
+        "criticality": 5,
+        "cve": "CVE-2021-44228",
+        "cvss": 10.0,
+        "data_class": "restricted",
+        "id": "bd1a8c801163c55c",
+        "internet_exposed": true,
+        "kind": "vulnerability",
+        "privileged": true,
+        "sources": [
+          "qualys",
+          "wiz"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "aws",
+          "finding_id": "2b9893a4e562cfe6",
+          "kind": "storage_public",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "8c70b207cf965d94df51b6b3201289d51fd4a0ae54bfddc4adc3600cd64c8db4",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Map the placeholder to the existing bucket in the owner's Terraform module.",
+            "Inspect access policy, CloudTrail data events and downstream access dependencies.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": {
+            "resource": {
+              "aws_s3_bucket_public_access_block": {
+                "reviewed": {
+                  "block_public_acls": true,
+                  "block_public_policy": true,
+                  "bucket": "synthetic-review-bucket",
+                  "ignore_public_acls": true,
+                  "restrict_public_buckets": true
+                }
+              }
+            }
+          }
+        },
+        "trace": [
+          {
+            "output_digest": "10265a4c82fb4a0af23a2955e505ecb82796219401ff1f8398ce5308e19222f4",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "8af6fa24a1ddfc19d18a678de36a6298435471538088be9fa526752811323181",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "6640893e7b977383f7f463be1203ca97e53b2c4bdb93f56d030b17b4bfb91381",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "d2afccf51d41c00f785ed23d41775c05724ad1f5c8d1468ffe6d00c9335f5d41",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "eb71cd01984c6c9c005b26ab1db9e45300268834b4c473f5208b7edd42df78ea",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "d2afccf51d41c00f785ed23d41775c05724ad1f5c8d1468ffe6d00c9335f5d41"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-24T00:00:00+00:00",
+        "finding_id": "2b9893a4e562cfe6",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P1",
+        "reasons": [
+          "+25: cloud configuration baseline",
+          "+15: internet exposure",
+          "+10: asset criticality \u00d7 2",
+          "+10: confidential/restricted data classification",
+          "P1 override: exposed KEV asset or exposed sensitive storage"
+        ],
+        "score": 60,
+        "uncertainties": []
+      },
+      "evidence": null,
+      "finding": {
+        "asset": "aws-store-01",
+        "cloud": "aws",
+        "criticality": 5,
+        "cve": null,
+        "cvss": 0.0,
+        "data_class": "restricted",
+        "id": "2b9893a4e562cfe6",
+        "internet_exposed": true,
+        "kind": "storage_public",
+        "privileged": false,
+        "sources": [
+          "wiz"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "azure",
+          "finding_id": "54f37d34dcb4ef18",
+          "kind": "storage_public",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "a5bc1d8861b86a130685ad91a3996f452831f9b75a1df4d058e9238d474758bc",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Merge these settings into the existing module; do not create a parallel account.",
+            "Verify private endpoint, DNS and approved residency with the data owner.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": {
+            "resource": {
+              "azurerm_storage_account": {
+                "reviewed": {
+                  "account_replication_type": "LRS",
+                  "account_tier": "Standard",
+                  "allow_nested_items_to_be_public": false,
+                  "https_traffic_only_enabled": true,
+                  "location": "canadacentral",
+                  "min_tls_version": "TLS1_2",
+                  "name": "syntheticreviewstore",
+                  "public_network_access_enabled": false,
+                  "resource_group_name": "synthetic-review-rg"
+                }
+              }
+            }
+          }
+        },
+        "trace": [
+          {
+            "output_digest": "a976a3d4c007188210f9737678ec96374d9c19ba42b703fb105b9b82c9ae2fcd",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "8af6fa24a1ddfc19d18a678de36a6298435471538088be9fa526752811323181",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "8192ea5726ed83346036e754d54098a0560bdee4d2b76766f31d23aef9f2a247",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "2838d50f2f7117ee386fa4170b62776588def5dd05220373ad183c0c4f875f18",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "6780437c341ed74606c6ed6a955ce9200fbf7a5cd52b6f158ac487c109734816",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "2838d50f2f7117ee386fa4170b62776588def5dd05220373ad183c0c4f875f18"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-24T00:00:00+00:00",
+        "finding_id": "54f37d34dcb4ef18",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P1",
+        "reasons": [
+          "+25: cloud configuration baseline",
+          "+15: internet exposure",
+          "+8: asset criticality \u00d7 2",
+          "+10: confidential/restricted data classification",
+          "P1 override: exposed KEV asset or exposed sensitive storage"
+        ],
+        "score": 58,
+        "uncertainties": []
+      },
+      "evidence": null,
+      "finding": {
+        "asset": "azure-store-01",
+        "cloud": "azure",
+        "criticality": 4,
+        "cve": null,
+        "cvss": 0.0,
+        "data_class": "confidential",
+        "id": "54f37d34dcb4ef18",
+        "internet_exposed": true,
+        "kind": "storage_public",
+        "privileged": false,
+        "sources": [
+          "wiz"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "aws",
+          "finding_id": "f190b91aae1bbc2f",
+          "kind": "network_open",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "4ca547a94ef207cfd77bf9310cd38a4326675c2d250e87cb662873a1a8a8bc90",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Map legitimate callers; propose approved source CIDRs and required ports.",
+            "Remove the existing broad rule in the owner module after connectivity review.",
+            "Test segmentation, firewall/WAF policy and flow-log detections in staging.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": null
+        },
+        "trace": [
+          {
+            "output_digest": "7960ffc1f567f42b966ef4319700a33461e002a0484b816ff725bd2076063ed0",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "8af6fa24a1ddfc19d18a678de36a6298435471538088be9fa526752811323181",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "50802a2e5a4b765abff7fe053bbe2e684ede40a8b6068a437ed0f705e659e303",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "363e30e1bface5c18f6c89b71155ebc5e2612a2645d4570f4588d1810870d3ff",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "57ee21d1ebef040a53cfa59e54e5295356dc009769734fcd263baab34c19a7e9",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "363e30e1bface5c18f6c89b71155ebc5e2612a2645d4570f4588d1810870d3ff"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-26T00:00:00+00:00",
+        "finding_id": "f190b91aae1bbc2f",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P2",
+        "reasons": [
+          "+25: cloud configuration baseline",
+          "+15: internet exposure",
+          "+8: asset criticality \u00d7 2",
+          "+10: privileged workload or entitlement"
+        ],
+        "score": 58,
+        "uncertainties": []
+      },
+      "evidence": null,
+      "finding": {
+        "asset": "aws-admin-01",
+        "cloud": "aws",
+        "criticality": 4,
+        "cve": null,
+        "cvss": 0.0,
+        "data_class": "internal",
+        "id": "f190b91aae1bbc2f",
+        "internet_exposed": true,
+        "kind": "network_open",
+        "privileged": true,
+        "sources": [
+          "wiz"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "aws",
+          "finding_id": "53555801c7c6f78a",
+          "kind": "iam_wildcard",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "d243ce09dc2a072f5c1a4815cd91085e8c38330396fc9039b7f050e84aefc223",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Review IAM Access Analyzer and CloudTrail usage over an agreed observation window.",
+            "Replace wildcard permissions with reviewed actions, resources and conditions.",
+            "Validate federation/workload identity paths and simulate the proposed policy.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": null
+        },
+        "trace": [
+          {
+            "output_digest": "0c9511a9483cc41a5ee0d0bf34de1d80b392e72b983651df4f18e955a07c0bff",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "8af6fa24a1ddfc19d18a678de36a6298435471538088be9fa526752811323181",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "b2f2ff8447877d52db0651f0865e1bfd1ee9a1331f5e42c21fe098f342a1cdcc",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "558372eca4c6c042b820f32a78c44552d2fbd4540eb5fd8be70d45a2b56566c5",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "add5912f110db3a2caa2fec6381f6dc2929b4055b33d4c2339bb3daae7264961",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "558372eca4c6c042b820f32a78c44552d2fbd4540eb5fd8be70d45a2b56566c5"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-26T00:00:00+00:00",
+        "finding_id": "53555801c7c6f78a",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P2",
+        "reasons": [
+          "+25: cloud configuration baseline",
+          "+8: asset criticality \u00d7 2",
+          "+10: confidential/restricted data classification",
+          "+10: privileged workload or entitlement",
+          "P2 floor: privileged wildcard entitlement requires expedited review"
+        ],
+        "score": 53,
+        "uncertainties": []
+      },
+      "evidence": null,
+      "finding": {
+        "asset": "aws-job-01",
+        "cloud": "aws",
+        "criticality": 4,
+        "cve": null,
+        "cvss": 0.0,
+        "data_class": "confidential",
+        "id": "53555801c7c6f78a",
+        "internet_exposed": false,
+        "kind": "iam_wildcard",
+        "privileged": true,
+        "sources": [
+          "wiz"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "aws",
+          "finding_id": "77a7be9f6411ec3e",
+          "kind": "vulnerability",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "d73669dccfac13c6b6d67db0fb7d048259d9fb678e73899fd9661e5bd965f0c5",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Confirm CVE-2099-9999999 applicability against installed versions and vendor guidance.",
+            "Select a vendor-supported fixed version; rebuild, scan and test the workload.",
+            "Use a canary rollout and owner-approved maintenance window.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": null
+        },
+        "trace": [
+          {
+            "output_digest": "9f162fd56f82f1bb7237ddc6057373e1d12fc2df9ebb42f0844c6bbfad373e16",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "42da495ffbdcf11166a0255e55b425fffef596303e7d3fd8ee08e5ea085bb7d1",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "1341e2fbf834ca3a2da7bc1e573422323681c6bbd352eba565e4e529d4cfcc56",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "a53a5727c2cf3f4b17ed04e3e199f65e95578eeba869a1166f20e982de063674",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "a01481e579a507428689e264fb90d1fa02c915d94315bb6807c99b78634a91da",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "a53a5727c2cf3f4b17ed04e3e199f65e95578eeba869a1166f20e982de063674"
+        }
+      },
+      "decision": {
+        "due_at": "2026-10-26T00:00:00+00:00",
+        "finding_id": "77a7be9f6411ec3e",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P2",
+        "reasons": [
+          "+12: CVSS severity \u00d7 3",
+          "+4: asset criticality \u00d7 2",
+          "P2 floor: incomplete intelligence cannot imply low risk"
+        ],
+        "score": 16,
+        "uncertainties": [
+          "missing, stale, or future-dated CVE intelligence; manual verification"
+        ]
+      },
+      "evidence": {
+        "cve": "CVE-2099-9999999",
+        "epss": null,
+        "epss_date": null,
+        "kev": null,
+        "kev_date": null,
+        "provenance": "simulated-fixture"
+      },
+      "finding": {
+        "asset": "aws-unknown-01",
+        "cloud": "aws",
+        "criticality": 2,
+        "cve": "CVE-2099-9999999",
+        "cvss": 4.0,
+        "data_class": "internal",
+        "id": "77a7be9f6411ec3e",
+        "internet_exposed": false,
+        "kind": "vulnerability",
+        "privileged": false,
+        "sources": [
+          "qualys"
+        ]
+      }
+    },
+    {
+      "agent": {
+        "authority": "analysis_only; human approval required for any external change",
+        "proposal": {
+          "cloud": "azure",
+          "finding_id": "3cd19781c8f388bc",
+          "kind": "vulnerability",
+          "limitations": [
+            "No state, provider credentials, plan or deployment available.",
+            "Templates do not replace review of existing resources, encryption or key policy."
+          ],
+          "proposal_digest": "7611fdc61a454dea00f4456396ebc3dda2a0912b1c5a5f04ce9065ace073a937",
+          "rollback": "Revert the reviewed module revision and re-plan; never restore public access without incident/change-owner approval. Retain last known good workload image.",
+          "status": "proposal_only",
+          "steps": [
+            "Confirm asset ownership, affected configuration and business dependencies.",
+            "Confirm CVE-2024-3094 applicability against installed versions and vendor guidance.",
+            "Select a vendor-supported fixed version; rebuild, scan and test the workload.",
+            "Use a canary rollout and owner-approved maintenance window.",
+            "Run format, provider validation and a reviewed plan in the owner environment.",
+            "Require human change approval; rescan after rollout and attach closure evidence."
+          ],
+          "terraform": null
+        },
+        "trace": [
+          {
+            "output_digest": "7448c6370cde695ea61c0ef55fdd36e2ae94bbeff9500446f4d2c4bc83fd0752",
+            "tool": "inspect_context"
+          },
+          {
+            "output_digest": "4cdddd0cba2243989440f6a42d10bbddffc11471c281066a123dacb933dd1695",
+            "tool": "get_cve_evidence"
+          },
+          {
+            "output_digest": "6e150e6bfd2b6288389c67f3cb2f04e67cf84dd624fe1d97e7f83581b93509ed",
+            "tool": "explain_policy"
+          },
+          {
+            "output_digest": "39e4138227603b2d8dd9c6fdea6c4f04e81617dc3671b792bbfae49bd65a35fa",
+            "tool": "propose_remediation"
+          },
+          {
+            "output_digest": "c77c7619ffb4ee523cf620c6e8ba2f208af7bfb5939eda65769d34239ec4fb8b",
+            "tool": "validate_remediation"
+          }
+        ],
+        "validation": {
+          "checks": [
+            "exact trusted proposal",
+            "no execution hooks",
+            "no broad ingress",
+            "no embedded credentials"
+          ],
+          "errors": [],
+          "terraform_provider_validation": "not_run; requires owner environment",
+          "valid": true,
+          "validated_proposal_digest": "39e4138227603b2d8dd9c6fdea6c4f04e81617dc3671b792bbfae49bd65a35fa"
+        }
+      },
+      "decision": {
+        "due_at": "2026-11-06T00:00:00+00:00",
+        "finding_id": "3cd19781c8f388bc",
+        "policy_code_digest": "b25fcf16dbc3e53f32e67651fdba04e90c16ec690cffb1f3216b9ef5ec543403",
+        "policy_config_digest": "21cf53ece31cd0a0a8d8d301532af00ecf122373bb07b3443dd0f132d8b8225d",
+        "policy_digest": "cd40b94e3917d8f7e3106ec80d664f54d16336c63fd9e529a3ed3f394c7dfa6b",
+        "policy_version": "1.0",
+        "priority": "P3",
+        "reasons": [
+          "+30: CVSS severity \u00d7 3",
+          "+1: EPSS exploitation likelihood \u00d7 20",
+          "+4: asset criticality \u00d7 2"
+        ],
+        "score": 35,
+        "uncertainties": []
+      },
+      "evidence": {
+        "cve": "CVE-2024-3094",
+        "epss": 0.04,
+        "epss_date": "2026-10-23",
+        "kev": false,
+        "kev_date": "2026-10-23",
+        "provenance": "simulated-fixture"
+      },
+      "finding": {
+        "asset": "azure-build-01",
+        "cloud": "azure",
+        "criticality": 2,
+        "cve": "CVE-2024-3094",
+        "cvss": 10.0,
+        "data_class": "internal",
+        "id": "3cd19781c8f388bc",
+        "internet_exposed": false,
+        "kind": "vulnerability",
+        "privileged": false,
+        "sources": [
+          "qualys"
+        ]
+      }
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "by_priority": {
+      "P1": 4,
+      "P2": 3,
+      "P3": 1
+    },
+    "duplicates_merged": 1,
+    "raw_findings": 9,
+    "unique_findings": 8
+  },
+  "synthetic": true
+}

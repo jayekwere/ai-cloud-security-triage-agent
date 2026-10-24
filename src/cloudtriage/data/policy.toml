@@ -1,0 +1,11 @@
+version = "1.0"
+max_intel_age_days = 7
+p1_threshold = 80
+p2_threshold = 55
+p3_threshold = 30
+
+[sla_hours]
+P1 = 24
+P2 = 72
+P3 = 336
+P4 = 720

@@ -1,0 +1,17 @@
+{
+  "resource": {
+    "azurerm_storage_account": {
+      "reviewed": {
+        "account_replication_type": "LRS",
+        "account_tier": "Standard",
+        "allow_nested_items_to_be_public": false,
+        "https_traffic_only_enabled": true,
+        "location": "canadacentral",
+        "min_tls_version": "TLS1_2",
+        "name": "syntheticreviewstore",
+        "public_network_access_enabled": false,
+        "resource_group_name": "synthetic-review-rg"
+      }
+    }
+  }
+}
