@@ -16,7 +16,7 @@ Verified October 23, 2026 (America/Vancouver). These are observed engineering ch
 | Actual public feeds | FIRST EPSS and CISA KEV read successfully with synthetic context; [recorded observations](LIVE_FEED_SMOKE.json) |
 | Browser QA | Self-contained HTML rendered in Chrome; expandable evidence/proposal controls inspected; [captured view](demo-preview.jpg) |
 | Architecture | Independent fresh-context read-only review plus author reconciliation; threat model contains checked source anchors |
-| GitHub CI | Configured for Python 3.11–3.14; see the linked Actions run for the current remote result |
+| GitHub CI | **Passed on Python 3.11, 3.12, 3.13 and 3.14**, including all check steps and evidence upload; [verified run](https://github.com/jayekwere/ai-cloud-security-triage-agent/actions/runs/40056314561) on source commit `4fe7233` |
 
 The suite covers conservative duplicate aggregation, strict booleans/numeric ranges/identifiers, simulated-only input declaration, CVE syntax, size limits, KEV/exposure overrides, missing/stale/future intelligence, configuration baseline and privileged-IAM floor, low-risk priority, implementation/configuration digest binding, and deterministic replay without network access.
 
