@@ -5,13 +5,13 @@
 ![Synthetic data](https://img.shields.io/badge/data-synthetic-14866D)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue)
 
-**Turn cloud findings into explainable priorities, constrained remediation proposals, and human-reviewed ticket intents.**
+A Python workflow that prioritizes synthetic cloud findings, prepares remediation proposals, and requires review before a ticket can be submitted.
 
-Independent security engineering project by **Jonathan Ekwere**. Built with AI-assisted engineering and verified with executable tests. This is a portfolio implementation using synthetic data, not an employer deployment or a commercial scanner integration.
+An independent project by **Jonathan Ekwere**, built with AI assistance. The default demo uses synthetic findings and runs without an external scanner or cloud account.
 
 ![Triage review brief](docs/demo-preview.jpg)
 
-## Start with the evidence
+## Example output
 
 - [Sample review brief](examples/demo/report.md) · [Machine-readable results](examples/demo/report.json) · [Tool audit](examples/demo/audit.jsonl)
 - [Five-minute demo walkthrough](docs/DEMO.md)
@@ -20,9 +20,9 @@ Independent security engineering project by **Jonathan Ekwere**. Built with AI-a
 
 The included demo ingests **9 synthetic records**, merges **1 duplicate**, triages **8 findings**, and emits **51 hash-linked audit events**. These are reproducible fixture counts, not production impact metrics. It performs **zero external writes**.
 
-## Run in about a minute
+## Run the offline demo
 
-Requires Python 3.11 or newer. No runtime dependencies, cloud account, paid API, Terraform installation, Docker, or employer credentials are needed.
+Requires Python 3.11 or newer. The offline demo needs no runtime packages, cloud account, paid API, Terraform installation or container engine.
 
 ```bash
 git clone https://github.com/jayekwere/ai-cloud-security-triage-agent.git
@@ -40,7 +40,7 @@ Open `out/demo/report.html` in a browser. It is a self-contained local report wi
 PYTHONPATH=src python3 -m cloudtriage.cli demo --out out/another-demo
 ```
 
-## What actually runs
+## Workflow
 
 ```mermaid
 flowchart LR
@@ -67,11 +67,11 @@ flowchart LR
 | API integration | Optional fixed-endpoint FIRST EPSS, CISA KEV, OpenAI Responses and Jira Cloud REST v3; timeouts, byte limits, no redirects |
 | Audit and AppSec | Allowlisted audit fields, hash verification, escaped HTML, adversarial tests, Ruff security rules and CI |
 
-## Two honest execution modes
+## Execution modes
 
-**Offline is the default.** Fixtures explicitly label EPSS values and KEV flags as simulated. Public CVE identifiers are scenario labels; `CVE-2099-9999999` is deliberately fictional and missing from the intelligence fixture. The source export contains a prompt-injection string to demonstrate that raw scanner descriptions never enter the model or reports.
+**Offline mode is the default.** Fixtures explicitly label EPSS values and KEV flags as simulated. Public CVE identifiers are scenario labels; `CVE-2099-9999999` is deliberately fictional and missing from the intelligence fixture. The source export contains a prompt-injection string to demonstrate that raw scanner descriptions never enter the model or reports.
 
-**Optional model mode** requires a separately provisioned API key and a model ID your account can access. ChatGPT, Claude, Cursor and Codex subscriptions do not imply that an API key is available to this project. No key is bundled or read automatically from another app. The implemented provider is OpenAI; Claude/Cursor/Codex are not falsely presented as runtime integrations.
+**Optional model mode** requires a separately provisioned API key and a model ID your account can access. The implemented model provider is OpenAI. It needs its own API credentials; the project does not reuse credentials or subscriptions from other applications.
 
 ```bash
 # Set OPENAI_API_KEY and OPENAI_MODEL securely in your local environment first.
@@ -89,7 +89,7 @@ cloudtriage triage --intel live --out out/live-intel
 
 Live mode uses today's local date unless `--as-of` is specified, records the source dates, and stops on feed failure instead of silently substituting fixtures. A stale or missing feed result cannot imply low risk. Network availability and feed limits remain external dependencies.
 
-## Policy before persuasion
+## Risk policy
 
 The model cannot choose a score, lower a priority, invent a fixed package version, modify a Terraform template, approve an action, or send a ticket. The versioned [policy](src/cloudtriage/data/policy.toml) governs decisions. See the complete [scoring rationale and tradeoffs](docs/ARCHITECTURE.md#risk-policy).
 
@@ -117,7 +117,7 @@ GitHub Actions runs linting, security checks, tests, offline demo generation, au
 
 ## Scope, authorship and next steps
 
-This implementation demonstrates a reviewable engineering approach, not production operating history, scanner certification, proven risk reduction or HIPAA/HITRUST/SOC 2 compliance. It uses no patient records, employer exports, or proprietary code. AI assistance was used to draft and iterate code/docs; executable evidence and limitations are available for inspection.
+This is a synthetic-data lab. It does not establish production performance, measured risk reduction or compliance certification. AI assistance was used for code and documentation; tests, sample outputs and limitations are available for review.
 
 Before production use: replace synthetic adapters with authenticated read-only vendor integrations; validate findings against asset inventory and actual configurations; calibrate risk thresholds with owners; obtain privacy/residency approval for model egress; add central identity, signed approvals and durable remote audit storage; validate Terraform with pinned providers and real plans in a sandbox; perform operational, privacy, dependency and load reviews. A real provider call and real Jira write are optional and are not implied by mocked contract tests.
 
