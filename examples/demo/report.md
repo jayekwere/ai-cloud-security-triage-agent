@@ -1,4 +1,4 @@
-# Cloud Security Triage — Review Brief
+# Cloud Security Triage - Review Brief
 
 **Synthetic independent project · 2026-10-23 · deterministic planner**
 

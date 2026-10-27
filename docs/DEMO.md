@@ -6,15 +6,15 @@ This independent cloud security triage workflow connects vulnerability intellige
 
 ## Demonstration
 
-**Minute 1 — run it.** Install locally and run `cloudtriage demo --out out/walkthrough`. Open the HTML report. State clearly that this is the deterministic mode, using simulated intelligence, with no cloud/Jira writes. Show nine records becoming eight unique findings.
+**Minute 1 - run it.** Install locally and run `cloudtriage demo --out out/walkthrough`. Open the HTML report. State clearly that this is the deterministic mode, using simulated intelligence, with no cloud/Jira writes. Show nine records becoming eight unique findings.
 
-**Minute 2 — show judgment.** Expand an exposed KEV scenario. Explain why exposure plus known exploitation outranks severity alone. Compare the internal high-CVSS scenario and the fictional CVE with missing evidence. Explain the P2 uncertainty floor and that the additive score is not a calibrated probability. The sample distribution is P1=4, P2=3, P3=1, P4=0; these are scenario results, not business metrics.
+**Minute 2 - show judgment.** Expand an exposed KEV scenario. Explain why exposure plus known exploitation outranks severity alone. Compare the internal high-CVSS scenario and the fictional CVE with missing evidence. Explain the P2 uncertainty floor and that the additive score is not a calibrated probability. The sample distribution is P1=4, P2=3, P3=1, P4=0; these are scenario results, not business metrics.
 
-**Minute 3 — inspect agent authority.** Open `agent.py`. Show the five analytical tools, fixed empty arguments, prerequisite checks, call budget and output digests. Explain that the OpenAI implementation makes real Responses tool-call requests when explicitly configured, while the demo uses a scripted planner. Mocked provider tests verify request/response flow; they do not prove a live model run. State the live-validation status from VALIDATION.md.
+**Minute 3 - inspect agent authority.** Open `agent.py`. Show the five analytical tools, fixed empty arguments, prerequisite checks, call budget and output digests. Explain that the OpenAI implementation makes real Responses tool-call requests when explicitly configured, while the demo uses a scripted planner. Mocked provider tests verify request/response flow; they do not prove a live model run. State the live-validation status from VALIDATION.md.
 
-**Minute 4 — review a change.** Show the S3 or Azure Terraform JSON proposal, its static validation result, placeholders and dependency/rollback checks. Explain why you did not invent a fixed version for a CVE or run a cloud change. Show Jira dry-run ADF and the exact intent digest. The separate interactive approval lasts one hour; concurrent/repeated submissions cannot reserve the same intent twice.
+**Minute 4 - review a change.** Show the S3 or Azure Terraform JSON proposal, its static validation result, placeholders and dependency/rollback checks. Explain why you did not invent a fixed version for a CVE or run a cloud change. Show Jira dry-run ADF and the exact intent digest. The separate interactive approval lasts one hour; concurrent/repeated submissions cannot reserve the same intent twice.
 
-**Minute 5 — prove controls and limits.** Run tests and audit verification. Point to prompt-injection exclusion, unsafe-tool denial, changed-payload rejection, expiry, concurrency, timeout ambiguity and HTML escaping tests. Explain local ledger/audit limitations and what central identity, signed approvals, durable logs, real vendor adapters and plan/rescan evidence would add.
+**Minute 5 - prove controls and limits.** Run tests and audit verification. Point to prompt-injection exclusion, unsafe-tool denial, changed-payload rejection, expiry, concurrency, timeout ambiguity and HTML escaping tests. Explain local ledger/audit limitations and what central identity, signed approvals, durable logs, real vendor adapters and plan/rescan evidence would add.
 
 ## Design questions
 

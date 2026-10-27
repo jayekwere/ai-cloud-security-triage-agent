@@ -32,7 +32,7 @@ def write_json(path: Path, value) -> None:
 def markdown(report: dict) -> str:
     s = report["summary"]
     lines = [
-        "# Cloud Security Triage — Review Brief",
+        "# Cloud Security Triage - Review Brief",
         "",
         f"**Synthetic independent project · {report['as_of']} · {report['provider']} planner**",
         "",
