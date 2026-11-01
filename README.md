@@ -7,7 +7,7 @@
 
 A Python workflow that prioritizes synthetic cloud findings, prepares remediation proposals, and requires review before a ticket can be submitted.
 
-An independent project by **Jonathan Ekwere**, built with AI assistance. The default demo uses synthetic findings and runs without an external scanner or cloud account.
+An independent project by **Jonathan Ekwere**. The default demo uses synthetic findings and runs without an external scanner or cloud account.
 
 ![Triage review brief](docs/demo-preview.jpg)
 
@@ -117,7 +117,7 @@ GitHub Actions runs linting, security checks, tests, offline demo generation, au
 
 ## Scope, authorship and next steps
 
-This is a synthetic-data lab. It does not establish production performance, measured risk reduction or compliance certification. AI assistance was used for code and documentation; tests, sample outputs and limitations are available for review.
+This is a synthetic-data lab. It does not establish production performance, measured risk reduction or compliance certification. Tests, sample outputs and limitations are available for review.
 
 Before production use: replace synthetic adapters with authenticated read-only vendor integrations; validate findings against asset inventory and actual configurations; calibrate risk thresholds with owners; obtain privacy/residency approval for model egress; add central identity, signed approvals and durable remote audit storage; validate Terraform with pinned providers and real plans in a sandbox; perform operational, privacy, dependency and load reviews. A real provider call and real Jira write are optional and are not implied by mocked contract tests.
 
@@ -131,3 +131,7 @@ Related portfolio work: [CVE exploit prediction](https://github.com/jayekwere/cv
 - [Jira Cloud issue creation](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-post).
 
 MIT licensed. See [SECURITY.md](SECURITY.md) for the security boundary and reporting guidance.
+
+---
+
+**AI assistance:** AI tools helped with code or documentation.
